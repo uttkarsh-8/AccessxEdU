@@ -1,0 +1,27 @@
+{
+  "app": {
+    "config": {
+      "name": "full-stack-app"
+    }
+  },
+  "llm": {
+    "provider": "openai",
+    "config": {
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.1,
+      "max_tokens": 1000,
+      "top_p": 1,
+      "stream": true,
+      "prompt": "Use the following pieces of context to answer the query at the end. Be highly specifc with your answers and avoid generalized responses.\n$context\n\nQuery: $query\n\nHelpful Answer:",
+      "system_prompt": "Act as a guiding teacher.",
+      "api_key": "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"
+    }
+  },
+  "embedder": {
+    "provider": "openai",
+    "config": {
+      "model": "text-embedding-ada-002",
+      "api_key": "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"
+    }
+  }
+}
