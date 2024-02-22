@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard Page</title>
+</head>
+<body>
+<section>
+    <div id="sidebar" class="sidebar">
+        <a href="#" class="closebtn" onclick="closeNav()"> ×</a>
+        <a th:href="@{/}" href="">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Features</a>
+        <a href="#">Contact</a>
+        <a th:href="@{/premium}" href="#">Donation</a>
+        <a th:href="@{/logout}" href="#">Logout</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+        <!-- Your existing content goes here -->
+    </div>
+
+    <div class="hero-content">
+        <h1>Dashboard <img src="contact.jpg" alt="User Photo" class="user-photo"></h1> <!-- User photo next to Dashboard text -->
+    </div>
+    <div class="user-info">
+        <h2>User Information</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <strong>Grade:</strong> <span th:text="${user.standard}"></span>
+            </div>
+            <div class="info-item">
+                <strong>Email:</strong> <span th:text="${user.email}"></span>
+            </div>
+            <div class="info-item">
+                <strong>Age:</strong> 18
+            </div>
+            <div class="info-item">
+                <strong>Favorite Subject:</strong> Mathematics
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="courses">
+            <h2>Your Courses</h2>
+            <div class="course-list">
+                <div class="course">
+                    <div class="course-description">
+                        CLASS 6
+                    </div>
+                    <div class="course-description">
+                        <p align="right">Mathematics</p>
+                    </div>
+
+                </div>
+                <!-- Repeat for more courses -->
+            </div>
+        </div>
+
+        <div id="assessments">
+            <h2>Assessments</h2>
+            <div class="assessment-list">
+                <div class="assessment">
+                    <div class="assessment-description">
+                        Physics
+                    </div>
+                    <div class="feature-icon">
+                        <img src="phy.png" alt="Assessment 1 Logo">
+                    </div>
+                </div>
+                <div class="assessment">
+                    <div class="assessment-description">
+                        Mathematics
+                    </div>
+                    <div class="feature-icon">
+                        <img src="math.png" alt="Assessment 1 Logo">
+                    </div>
+                </div>
+                <div class="assessment">
+                    <div class="assessment-description">
+                        Biology
+                    </div>
+                    <div class="feature-icon">
+                        <img src="bio.png" alt="Assessment 1 Logo">
+                    </div>
+                </div>
+                <div class="assessment">
+                    <div class="assessment-description">
+                        Chemistry
+                    </div>
+                    <div class="feature-icon">
+                        <img src="c2.png" alt="Assessment 1 Logo">
+                    </div>
+                </div>
+                <div class="assessment">
+                    <div class="assessment-description">
+                        English
+                    </div>
+                    <div class="feature-icon">
+                        <img src="eng.png" alt="Assessment 1 Logo">
+                    </div>
+                </div>
+                <!-- Repeat for more assessments -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2024 User Dashboard</p>
+    </footer>
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+
+</section>
+
+</body>
+</html>

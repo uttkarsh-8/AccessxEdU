@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})"
+      xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>About Page</title>
+    <style>
+        /* Custom CSS for gold and black theme */
+        .gold-background { background-color: #FFD700; }
+        .black-background { background-color: #000; }
+        .gold-text { color: #FFD700; }
+        .black-text { color: #000; }
+        .rounded-image {
+            width: 150px; /* Increased size */
+            height: 150px; /* Keep aspect ratio */
+            object-fit: cover; /* Adjust image to fit */
+            border-radius: 50%; /* Rounded image */
+            margin-top: -75px; /* Half outside the card */
+            border: 3px solid #000; /* Black border */
+        }
+        .card-custom {
+            width: 22rem; /* Increased card width */
+            margin: auto; /* Center card in the container */
+            margin-top: 5%; /* Margin top */
+        }
+        .list-unstyled {
+            padding-left: 0; /* Remove default padding */
+            list-style-type: none; /* No bullets */
+        }
+        .list-item {
+            margin-bottom: 10px; /* Spacing between points */
+        }
+        .form-input {
+            margin-bottom: 15px; /* Spacing between form inputs */
+        }
+        .submit-btn {
+            background-color: #000; /* Black background */
+            color: #FFD700; /* Gold text */
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="black-background">
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="card card-custom gold-background">
+            <img src="path_to_your_image.jpg" class="rounded-image mx-auto d-block" alt="RAG Chatbot Image">
+            <div class="card-body black-text">
+                <h5 class="card-title text-center">Support Education with RAG Chatbot</h5>
+                <ul class="list-unstyled">
+                    <li class="list-item">📚 Facilitates interactive learning, enhancing education for all.</li>
+                    <li class="list-item">⏰ Offers round-the-clock support, ensuring help is available whenever needed.</li>
+                    <li class="list-item">💡 Promotes personalized learning, adapting to each student's unique needs.</li>
+                </ul>
+                <p class="text-center mb-4">Your donation helps us keep these services free and accessible for students worldwide.</p>
+                <div class="container">
+                    <div class="form-group form-input mt-3">
+                        <input id="payment_field" type="text" class="form-control" placeholder="Enter any amount" name="amount">
+                    </div>
+                    <div class="container text-center">
+                        <!-- Pass the event to the paymentStart function -->
+                        <button onclick="paymentStart()" type="button" class="btn submit-btn btn-block mt-3">Donate</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+</body>
+</html>

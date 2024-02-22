@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<section>
+    <header>
+        <nav id="navbar">
+            <div class="logo"><img th:src="@{micon.png}" height="50%" width="50%"></div>
+            <ul>
+                <li><a th:href="@{/}" href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a th:href="@{/signin}" href="login1.html">Log in</a></li>
+                <li><a th:href="@{/signup}"  href="signup1.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>AccessxEdU</h1>
+            <p>Remote learning just got a whole lot easier.</p>
+            <br />
+            <a href="#courses" class="cta-btn">Explore Courses</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Why Choose Us</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img th:src="@{resources/static/img/accessibility-icon.png}" alt="Accessibility" />
+                </div>
+                <h3>Accessibility</h3>
+                <p>
+                    Ensuring our platform is accessible to learners of all abilities.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img th:src="interactive-icon.png" alt="Interactive Learning" />
+                </div>
+                <h3>Interactive</h3>
+                <p>Engage with dynamic content for a learning experience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img th:src="@{support-icon.png}" alt="24/7 Support" />
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Always available to help you with any questions or issues.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img th:src="customizable-icon.png" alt="Customizable Paths" />
+                </div>
+                <h3>RAG Chatbot</h3>
+                <p>Make any query cleared at any time with our chatbot</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-list">
+            <div class="course">
+                <img th:src="@{/images/c1.png}" alt="Course Logo" class="course-logo" />
+                <div class="course-description">
+                    <h3>CBSE</h3>
+                    <p>
+                        The National Council of Educational Research and Training (NCERT)
+                        is an autonomous organization in India that was established in
+                        1961 by the Government of India. Its primary objective is to
+                        assist and advise the central and state governments on academic
+                        matters related to school education. We follow the standard NCERT
+                        curriculum from classes 1-10
+                    </p>
+                </div>
+            </div>
+            <div class="course">
+                <img th:src="@{icse.jpeg}" alt="Course Logo" class="course-logo" />
+                <div class="course-description">
+                    <h3>ICSE</h3>
+                    <p>
+                        The National Council of Educational Research and Training (NCERT)
+                        is an autonomous organization in India that was established in
+                        1961 by the Government of India. Its primary objective is to
+                        assist and advise the central and state governments on academic
+                        matters related to school education. We follow the standard NCERT
+                        curriculum from classes 1-10
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EduSite. All rights reserved.</p>
+    </footer>
+
+</section>
+
+
+</body>
+</html>
