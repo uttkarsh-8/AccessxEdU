@@ -14,14 +14,14 @@
       "stream": true,
       "prompt": "Use the following pieces of context to answer the query at the end. Be highly specifc with your answers and avoid generalized responses.\n$context\n\nQuery: $query\n\nHelpful Answer:",
       "system_prompt": "Act as a guiding teacher.",
-      "api_key": "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"
+      "api_key": "fhP5ZQmgX6d5wcw0Ts8g1EIArABRFz"
     }
   },
   "embedder": {
     "provider": "openai",
     "config": {
       "model": "text-embedding-ada-002",
-      "api_key": "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"
+      "api_key": "sP5ZQmgX6d5wcw08g1EIArABRFz"
     }
   }
 }
