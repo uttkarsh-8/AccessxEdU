@@ -95,7 +95,7 @@ public class HomeController {
         System.out.println(data);
         int amt = Integer.parseInt(data.get("amount").toString());
 
-        var client = new RazorpayClient("rzp_test_N5w4vDygKhUrXc", "Z6wSxS00VRsaVk5HR2F2GzWi");
+        var client = new RazorpayClient("rzp_test_N5", "Z6i");
 
         JSONObject object = new JSONObject();
         object.put("amount", amt*100);
@@ -107,6 +107,13 @@ public class HomeController {
         System.out.println(order);
 
         return order.toString();
+    }
+
+    @GetMapping("/bot")
+    public String botPage(@RequestParam(name = "subject", required = false, defaultValue = "general") String subject, Model model) {
+        model.addAttribute("title", "Chatbot - EdTech");
+        model.addAttribute("subject", subject);
+        return "query"; // This will return the query.html Thymeleaf template
     }
 
 }

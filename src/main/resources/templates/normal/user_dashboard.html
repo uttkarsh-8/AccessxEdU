@@ -9,10 +9,10 @@
     <div id="sidebar" class="sidebar">
         <a href="#" class="closebtn" onclick="closeNav()"> ×</a>
         <a th:href="@{/}" href="">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">Features</a>
-        <a href="#">Contact</a>
-        <a th:href="@{/premium}" href="#">Donation</a>
+        <a th:href="@{/bot(subject='Social Science')}" href="#">Social Science</a>
+        <a th:href="@{/bot(subject='Science ')}" href="#">Science</a>
+        <a th:href="@{/bot(subject='English ')}" href="#">English</a>
+        <a th:href="@{/premium}" href="#">Premium</a>
         <a th:href="@{/logout}" href="#">Logout</a>
     </div>
     <div id="main">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="hero-content">
-        <h1>Dashboard <img src="contact.jpg" alt="User Photo" class="user-photo"></h1> <!-- User photo next to Dashboard text -->
+        <h1>Welcome <span th:text="${user.name}"></span>,</h1> <!-- User photo next to Dashboard text -->
     </div>
     <div class="user-info">
         <h2>User Information</h2>
@@ -46,10 +46,10 @@
             <div class="course-list">
                 <div class="course">
                     <div class="course-description">
-                        CLASS 6
+                        CLASS 12
                     </div>
                     <div class="course-description">
-                        <p align="right">Mathematics</p>
+                        <p align="right">Free Access</p>
                     </div>
 
                 </div>
@@ -60,46 +60,56 @@
         <div id="assessments">
             <h2>Assessments</h2>
             <div class="assessment-list">
-                <div class="assessment">
-                    <div class="assessment-description">
-                        Physics
+                <!-- English -->
+                <a th:href="@{/bot(subject='English')}" style="text-decoration: none; color: inherit;">
+                    <div class="assessment">
+                        <div class="assessment-description">English</div>
+                        <div class="feature-icon">
+                            <img th:src="@{/img/eng.png}" alt="English Logo">
+                        </div>
                     </div>
-                    <div class="feature-icon">
-                        <img src="phy.png" alt="Assessment 1 Logo">
+                </a>
+
+                <!-- Social Science -->
+                <a th:href="@{/bot(subject='SocialScience')}" style="text-decoration: none; color: inherit;">
+                    <div class="assessment">
+                        <div class="assessment-description">Social Science</div>
+                        <div class="feature-icon">
+                            <img th:src="@{/img/eng.png}" alt="Social Science Logo">
+                        </div>
                     </div>
-                </div>
-                <div class="assessment">
-                    <div class="assessment-description">
-                        Mathematics
+                </a>
+
+                <!-- Science -->
+                <a th:href="@{/bot(subject='Science')}" style="text-decoration: none; color: inherit;">
+                    <div class="assessment">
+                        <div class="assessment-description">Science</div>
+                        <div class="feature-icon">
+                            <img th:src="@{/img/bio.png}" alt="Science Logo">
+                        </div>
                     </div>
-                    <div class="feature-icon">
-                        <img src="math.png" alt="Assessment 1 Logo">
+                </a>
+
+                <!-- Maths -->
+                <a th:href="@{/bot(subject='Maths')}" style="text-decoration: none; color: inherit;">
+                    <div class="assessment">
+                        <div class="assessment-description">Maths</div>
+                        <div class="feature-icon">
+                            <img th:src="@{/img/c2.png}" alt="Maths Logo">
+                        </div>
                     </div>
-                </div>
-                <div class="assessment">
-                    <div class="assessment-description">
-                        Biology
+                </a>
+
+                <!-- Computer Science -->
+                <a th:href="@{/bot(subject='ComputerScience')}" style="text-decoration: none; color: inherit;">
+                    <div class="assessment">
+                        <div class="assessment-description">Computer Science</div>
+                        <div class="feature-icon">
+                            <img th:src="@{/img/bio.png}" alt="Computer Science Logo">
+                        </div>
                     </div>
-                    <div class="feature-icon">
-                        <img src="bio.png" alt="Assessment 1 Logo">
-                    </div>
-                </div>
-                <div class="assessment">
-                    <div class="assessment-description">
-                        Chemistry
-                    </div>
-                    <div class="feature-icon">
-                        <img src="c2.png" alt="Assessment 1 Logo">
-                    </div>
-                </div>
-                <div class="assessment">
-                    <div class="assessment-description">
-                        English
-                    </div>
-                    <div class="feature-icon">
-                        <img src="eng.png" alt="Assessment 1 Logo">
-                    </div>
-                </div>
+                </a>
+
                 <!-- Repeat for more assessments -->
             </div>
         </div>

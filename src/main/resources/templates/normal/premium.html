@@ -44,22 +44,22 @@
     <div class="black-background">
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
         <div class="card card-custom gold-background">
-            <img src="path_to_your_image.jpg" class="rounded-image mx-auto d-block" alt="RAG Chatbot Image">
+            <img style="height: 40px" th:src="@{/img/customizable-icon.png}" class="rounded-image mx-auto d-block" alt="RAG Chatbot Image">
             <div class="card-body black-text">
                 <h5 class="card-title text-center">Support Education with RAG Chatbot</h5>
                 <ul class="list-unstyled">
-                    <li class="list-item">📚 Facilitates interactive learning, enhancing education for all.</li>
-                    <li class="list-item">⏰ Offers round-the-clock support, ensuring help is available whenever needed.</li>
+                    <li class="list-item">📚 Access to customized quiz's</li>
+                    <li class="list-item">⏰ 40 chat-bot calls per week from 10</li>
                     <li class="list-item">💡 Promotes personalized learning, adapting to each student's unique needs.</li>
                 </ul>
-                <p class="text-center mb-4">Your donation helps us keep these services free and accessible for students worldwide.</p>
+                <p class="text-center mb-4">Facilitates interactive learning, enhancing education for all.</p>
                 <div class="container">
                     <div class="form-group form-input mt-3">
-                        <input id="payment_field" type="text" class="form-control" placeholder="Enter any amount" name="amount">
+                        <input id="payment_field" type="text" class="form-control" placeholder="Enter amount" name="amount">
                     </div>
                     <div class="container text-center">
                         <!-- Pass the event to the paymentStart function -->
-                        <button onclick="paymentStart()" type="button" class="btn submit-btn btn-block mt-3">Donate</button>
+                        <button onclick="paymentStart()" type="button" class="btn submit-btn btn-block mt-3">PAY</button>
                     </div>
                 </div>
 

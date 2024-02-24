@@ -15,9 +15,9 @@ public class EmailService {
     public boolean sendEmail(String subject, String messageBody, String to) {
         boolean f = false;
 
-        String from = "uttkarsh.srivastava12@gmail.com";
+        String from = "uttkarsh.com";
         // Assuming you've replaced "yourpassword" with the actual password
-        final String password = "viur mcmi fttj mtel";
+        final String password = "viur ";
 
         String host = "smtp.gmail.com";
 

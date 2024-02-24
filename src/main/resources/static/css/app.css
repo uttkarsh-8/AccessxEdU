@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
 :root {
     --primary-color: #d4af37; /* Gold */
     --secondary-color: #343a40; /* Dark Grey for secondary text and elements */
@@ -317,7 +319,6 @@ header {
 }
 
 /*next is signup*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 body{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -359,9 +360,9 @@ h6 span{
 }
 .card-3d-wrap {
     position: relative;
-    width: 440px;
+    width: 500px;
     max-width: 100%;
-    height: 400px;
+    height: 500px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective: 800px;
@@ -379,7 +380,6 @@ h6 span{
     width: 100%;
     height: 100%;
     background-color: #2b2e38;
-    background-image: url('/img/pattern_japanese-pattern-2_1_2_0-0_0_1__ffffff00_000000.png');
     position: absolute;
     border-radius: 6px;
     -webkit-transform-style: preserve-3d;
@@ -402,13 +402,13 @@ h6 span{
 }
 .form-group{
     position: relative;
-    display: block;
+    display: flex;
     margin: 0;
     padding: 0;
 }
 .form-style {
     padding: 13px 20px;
-    padding-left: 55px;
+    /*padding-left: 55px;*/
     height: 48px;
     width: 100%;
     font-weight: 500;
@@ -625,3 +625,26 @@ h6 span{
     background-color: #ddd;
     color: black;
 }
+
+#responseArea{
+ color: white;
+}
+/* Adjust the width of the textarea as per your preference */
+#queryInput {
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+    width: 100%; /* Make the textarea full width within its container */
+}
+
+/* Ensure that the form does not exceed a maximum width for better aesthetics */
+#queryForm {
+    max-width: 500px; /* Adjust this value as needed */
+}
+
+/* No changes needed for other styles as they are handled by Bootstrap */
+#submitButton {
+    display: block; /* Ensures the button is a block-level element */
+    width: 100%; /* Makes the button stretch to the full width of its container */
+    padding: 10px 0; /* Provides padding on top and bottom but not on the left and right */
+    /* Rest of the styles remain unchanged */
+}
+

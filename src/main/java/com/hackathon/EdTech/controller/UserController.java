@@ -27,13 +27,13 @@ public class UserController {
 
     @GetMapping("/index")
     public String dashboard(Model model){
-
+            model.addAttribute("title", "User Dashboard");
         return "normal/user_dashboard";
     }
 
     @GetMapping("/premium")
     public String premium(Model model){
-        model.addAttribute("title", "Premium Subscription");
+        model.addAttribute("title", "Donation - EdTech");
 
         return "normal/premium";
     }

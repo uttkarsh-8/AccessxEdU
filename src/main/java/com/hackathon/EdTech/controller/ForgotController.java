@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,8 +36,9 @@ public class ForgotController {
     }
 
     @PostMapping("/send-otp")
-    public String sendOTP(@RequestParam("email")String email, HttpSession httpSession){
+    public String sendOTP(@RequestParam("email")String email, HttpSession httpSession, Model model){
 
+        model.addAttribute("title", "Forgot Password - EdTech");
         System.out.println("EMAIL: "+ email);
 
         //generating OTP of 4 digits
@@ -79,10 +81,8 @@ public class ForgotController {
                 return "forgot_email_form";
             }else{
                 //send change password form
-
+                return "password_change_form";
             }
-
-            return "password_change_form";
         }else{
             httpSession.setAttribute("message", "You have entered wrong otp");
             return "verify-otp";
@@ -91,7 +91,10 @@ public class ForgotController {
     }
     // change password
     @PostMapping("/change-password")
-    public String changePassword(@RequestParam("newpassword")String newpassword, HttpSession httpSession){
+    public String changePassword(@RequestParam("newpassword")String newpassword, HttpSession httpSession, Model model){
+
+        model.addAttribute("title", "Change Password - EdTech");
+
         String email = (String)httpSession.getAttribute("email");
         User user = userRepository.getUserByUserName(email);
         user.setPassword(bCryptPasswordEncoder.encode(newpassword));

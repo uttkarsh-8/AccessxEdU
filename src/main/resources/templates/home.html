@@ -8,7 +8,9 @@
 <section>
     <header>
         <nav id="navbar">
-            <div class="logo"><img th:src="@{micon.png}" height="50%" width="50%"></div>
+            <div class="logo">
+                <img th:src="@{/img/imgure.png}" alt="Logo" width="30" height="30"> <!-- Adjust the width and height values as needed -->
+            </div>
             <ul>
                 <li><a th:href="@{/}" href="#home">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
@@ -32,7 +34,7 @@
         <div class="features-container">
             <div class="feature-card">
                 <div class="feature-icon">
-                    <img th:src="@{resources/static/img/accessibility-icon.png}" alt="Accessibility" />
+                    <img th:src="@{/img/interactive-icon.png}" alt="Accessibility" />
                 </div>
                 <h3>Accessibility</h3>
                 <p>
@@ -41,21 +43,21 @@
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <img th:src="interactive-icon.png" alt="Interactive Learning" />
+                    <img th:src="@{/img/customizable-icon.png}" alt="Interactive Learning" />
                 </div>
                 <h3>Interactive</h3>
                 <p>Engage with dynamic content for a learning experience.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <img th:src="@{support-icon.png}" alt="24/7 Support" />
+                    <img th:src="@{/img/c1.png}" alt="24/7 Support" />
                 </div>
                 <h3>24/7 Support</h3>
                 <p>Always available to help you with any questions or issues.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <img th:src="customizable-icon.png" alt="Customizable Paths" />
+                    <img th:src="@{/img/customizable-icon.png}" alt="Customizable Paths" />
                 </div>
                 <h3>RAG Chatbot</h3>
                 <p>Make any query cleared at any time with our chatbot</p>
@@ -67,7 +69,7 @@
         <h2>Our Courses</h2>
         <div class="course-list">
             <div class="course">
-                <img th:src="@{/images/c1.png}" alt="Course Logo" class="course-logo" />
+                <img th:src="@{/img/c1.png}" alt="Course Logo" class="course-logo" />
                 <div class="course-description">
                     <h3>CBSE</h3>
                     <p>
@@ -81,7 +83,7 @@
                 </div>
             </div>
             <div class="course">
-                <img th:src="@{icse.jpeg}" alt="Course Logo" class="course-logo" />
+                <img th:src="@{/img/icse.jpeg}" alt="Course Logo" class="course-logo" />
                 <div class="course-description">
                     <h3>ICSE</h3>
                     <p>
